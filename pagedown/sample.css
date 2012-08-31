@@ -1,0 +1,239 @@
+/* Markdown editor plugin */
+
+.wmd-button-bar {
+	width: 100%;
+	padding: 30px 0;
+}
+.wmd-input {
+	/* 604 */
+	height: 300px;
+	width: 100%;
+	background-color: white;
+	padding-top : 10px;
+	margin-top : 0px;
+	border-top: 0px solid #f9f9f9 ;
+	border-left: 1px solid #d7d7d7;
+	border-bottom: 1px solid #d7d7d7;
+	border-right: 1px solid #d7d7d7;
+}
+.wmd-preview {
+	/* 604 */
+	border: 0.5px dashed #d7d7d7;
+    	margin:10px;
+    	padding: 10px;
+	background-color: #eeaaaa; 
+}
+
+.wmd-preview pre,
+.qa-a-item-content pre {
+	width: 100%;
+	max-height: 400px;
+	overflow: auto;
+}
+
+.wmd-button-row {
+	position: relative; 
+    	padding-top : 10px;
+	padding-bottom : 5px;
+	padding-left : 5px;
+	padding-right : 50px;
+	margin-right: -2px;
+	border-left: 1px solid #d7d7d7;
+	border-right: 1px solid #d7d7d7;
+	background: #f9f9f9; 
+	height: 20px;
+}
+
+.wmd-spacer {
+	width: 1px; 
+	height: 0px; 
+	margin-left: 14px;
+	position: absolute;
+	background-color: Silver;
+	display: inline-block; 
+	list-style: none;
+}
+
+.wmd-button {
+   width: 20px;
+    height: 20px;
+    padding-left: 2px;
+    padding-right: 3px;
+    position: absolute;
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+
+.wmd-button > span {
+    /* note: background-image is set in plugin script */
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.wmd-spacer1 {
+    left: 50px;
+}
+.wmd-spacer2 {
+    left: 175px;
+}
+.wmd-spacer3 {
+    left: 300px;
+}
+
+.wmd-prompt-background {
+	background-color: black;
+}
+.wmd-prompt-dialog {
+	border: 1px solid #999999;
+	background-color: #F5F5F5;
+}
+.wmd-prompt-dialog > div {
+	font-size: 0.8em;
+	font-family: arial, helvetica, sans-serif;
+}
+.wmd-prompt-dialog > form > input[type="text"] {
+	border: 1px dashed #999999;
+	color: black;
+}
+.wmd-prompt-dialog > form > input[type="button"] {
+	border: 1px dashed #888888;
+	font-family: trebuchet MS, helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+
+/* highlight.js styles */
+
+pre code {
+  display: block;
+  padding: 0.5em;
+  background: #f6f6f6;
+}
+
+pre code,
+pre .ruby .subst,
+pre .tag .title,
+pre .lisp .title,
+pre .nginx .title {
+  color: black;
+}
+
+pre .string,
+pre .title,
+pre .constant,
+pre .parent,
+pre .tag .value,
+pre .rules .value,
+pre .rules .value .number,
+pre .preprocessor,
+pre .ruby .symbol,
+pre .ruby .symbol .string,
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
+pre .instancevar,
+pre .aggregate,
+pre .template_tag,
+pre .django .variable,
+pre .smalltalk .class,
+pre .addition,
+pre .flow,
+pre .stream,
+pre .bash .variable,
+pre .apache .tag,
+pre .apache .cbracket,
+pre .tex .command,
+pre .tex .special,
+pre .erlang_repl .function_or_atom,
+pre .markdown .header {
+  color: #800;
+}
+
+pre .comment,
+pre .annotation,
+pre .template_comment,
+pre .diff .header,
+pre .chunk,
+pre .markdown .blockquote {
+  color: #888;
+}
+
+pre .number,
+pre .date,
+pre .regexp,
+pre .literal,
+pre .smalltalk .symbol,
+pre .smalltalk .char,
+pre .go .constant,
+pre .change,
+pre .markdown .bullet,
+pre .markdown .link_url {
+  color: #080;
+}
+
+pre .label,
+pre .javadoc,
+pre .ruby .string,
+pre .decorator,
+pre .filter .argument,
+pre .localvars,
+pre .array,
+pre .attr_selector,
+pre .important,
+pre .pseudo,
+pre .pi,
+pre .doctype,
+pre .deletion,
+pre .envvar,
+pre .shebang,
+pre .apache .sqbracket,
+pre .nginx .built_in,
+pre .tex .formula,
+pre .erlang_repl .reserved,
+pre .input_number,
+pre .markdown .link_label,
+pre .vhdl .attribute {
+  color: #88f;
+}
+
+pre .keyword,
+pre .id,
+pre .phpdoc,
+pre .title,
+pre .built_in,
+pre .aggregate,
+pre .css .tag,
+pre .javadoctag,
+pre .phpdoc,
+pre .yardoctag,
+pre .smalltalk .class,
+pre .winutils,
+pre .bash .variable,
+pre .apache .tag,
+pre .go .typename,
+pre .tex .command,
+pre .markdown .strong,
+pre .request,
+pre .status {
+  font-weight: bold;
+}
+
+pre .markdown .emphasis {
+  font-style: italic;
+}
+
+pre .nginx .built_in {
+  font-weight: normal;
+}
+
+pre .coffeescript .javascript,
+pre .xml .css,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .tex .formula {
+  opacity: 0.5;
+}
