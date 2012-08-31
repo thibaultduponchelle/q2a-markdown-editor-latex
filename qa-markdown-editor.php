@@ -25,16 +25,11 @@ class qa_markdown_editor
 	function get_field(&$qa_content, $content, $format, $fieldname, $rows, $autofocus)
 	{
 
-    $html = '<link rel="stylesheet" href="'.$this->pluginurl.'free-online-latex-equation-editor_files/sci_2ools.css" type="text/css" />' ."\n";
-    $html .= '<link rel="stylesheet" href="'.$this->pluginurl.'free-online-latex-equation-editor_files/sci_i2theme.css"type="text/css" />' ."\n";
-		$html .= '<link rel="stylesheet" href="'.$this->pluginurl.'free-online-latex-equation-editor_files/sci_tex2img.css" type="text/css">' ."\n";
-    $html .= '<link rel="stylesheet" href="'.$this->pluginurl.'free-online-latex-equation-editor_files/JQTabs.css" type="text/css">' ."\n";
-    $html .= '<link rel="stylesheet" type="text/css" href="'.$this->pluginurl.'free-online-latex-equation-editor_files/jquery.css" media="screen">' ."\n";
-	
-		$html .= '<script src="'.$this->pluginurl.'free-online-latex-equation-editor_files/jsonrpc.js" async="" type="text/javascript" id="LR2"></script>' ."\n";
-    $html .= '<script src="'.$this->pluginurl.'free-online-latex-equation-editor_files/parent.js" async="" type="text/javascript" id="LR1"></script>' ."\n";
-    $html .= '<script src="'.$this->pluginurl.'free-online-latex-equation-editor_files/ga.js" async="" type="text/javascript"></script>' ."\n";
-    $html .= '<script type="text/javascript" src="'.$this->pluginurl.'free-online-latex-equation-editor_files/jquery_003.js"></script>' ."\n";
+    $html = '<link rel="stylesheet" href="'.$this->pluginurl.'free-online-latex-equation-editor_files/foleef.css" type="text/css" />' ."\n";
+		
+		// Include necessary  jquery stuff
+		$html .= '<script type="text/javascript" src="'.$this->pluginurl.'free-online-latex-equation-editor_files/jquery_002.js"></script>' ."\n";
+    $html .= '<script type="text/javascript" src="'.$this->pluginurl.'free-online-latex-equation-editor_files/jquery.js"></script>' ."\n";
 
 
 		// Math jax asynchronous and init functions
@@ -42,46 +37,42 @@ class qa_markdown_editor
     
 		// Free math editor functions
 		$html .= '<script type="text/javascript" src="'.$this->pluginurl.'foleef_functions.js"></script>' . "\n";
-		$html .= '<script src="'.$this->pluginurl.'free-online-latex-equation-editor_files/googleapis.js"></script>' . "\n";
 
 		// Get the generated name of the fields 
 		$prev_id = "wmd-preview-".$fieldname;
 		$input_id = "wmd-input-".$fieldname;
 		$buffer_id = "wmd-buffer-".$fieldname;
 
-		// Get the scripts for markdown editor
-		//$html .= '<script src="'.$this->pluginurl.'pagedown/Markdown.Converter.js"></script>' . "\n";
 
-		$html .= '<script>Preview.callback = MathJax.Callback(["CreatePreview", Preview, "'.$prev_id.'"]); Preview.callback.autoReset = true;</script>' ."\n";
-
-		$html .= '<div class="wmd-panel">' ."\n"; // Open wmd-panel
-		//$html .= $this->pluginurl."foleef.html"."\n";
-		//$html .= '"'.$this->pluginurl.'foleef.html"'."\n";
-		//$html .= '<script src="'.$this->pluginurl.'foleef.html"></script>' . "\n";
-    ob_start();
-		include($this->pluginurl.'foleef.html');
 		
-    $html .= ob_get_clean();
+		$html .= '<div class="wmd-panel">' ."\n"; // Open wmd-panel
+		
+		// What a weird line ob_start. In fact I need to include a file into a var BUT I need to execute PHP inside so include is nice, But I don't want to print it !
+    ob_start(); // Redirect buffer
+		include($this->pluginurl.'foleef.html'); // Execute PHP 
+    $html .= ob_get_clean();	// Get the generated html
+
+		// Button bar
 		$html .= '<div id="wmd-button-bar-'.$fieldname.'" class="wmd-button-bar"></div>' . "\n";
+		// Textarea
 		$html .= '<textarea name="'.$fieldname.'" id="wmd-input-'.$fieldname.'" class="wmd-input" onkeydown="Preview.Update();">'.$content.'</textarea>' . "\n";
 		$html .= '</div>' ."\n"; // Close wmd-panel
+		// Preview 
 		$html .= '<h3>Preview</h3>' . "\n";
+		// Invisible Preview (used as a buffer for MathJax)
 		$html .= '<div id="wmd-preview-'.$fieldname.'" class="wmd-preview" style="display:none"></div>' . "\n";
+		// The preview you see
 		$html .= '<div id="wmd-buffer-'.$fieldname.'" class="wmd-preview"></div>' . "\n";
 
+		// Get the scripts for markdown editor
 		$html .= '<script src="'.$this->pluginurl.'pagedown/Markdown.Converter.js"></script>' . "\n";
 		$html .= '<script src="'.$this->pluginurl.'pagedown/Markdown.Sanitizer.js"></script>' . "\n";
 		$html .= '<script src="'.$this->pluginurl.'pagedown/Markdown.Editor.js"></script>' . "\n";
+		$html .= '<script>Preview.callback = MathJax.Callback(["CreatePreview", Preview, "'.$prev_id.'"]); Preview.callback.autoReset = true;</script>' ."\n";
 		$html .= '<script>Preview.Init("'.$prev_id.'","'.$buffer_id.'");Preview.Update();</script>' ."\n";
-		$html .= '<script type="text/javascript" src="'.$this->pluginurl.'free-online-latex-equation-editor_files/jquery_002.js"></script>' ."\n";
-    $html .= '<script type="text/javascript" src="'.$this->pluginurl.'free-online-latex-equation-editor_files/all.js"></script>' ."\n";
-    $html .= '<script type="text/javascript" src="'.$this->pluginurl.'free-online-latex-equation-editor_files/widgets.js"></script>' ."\n";
-		$html .= '<script type="text/javascript"> var sc_project = 4155887; var sc_invisible = 1; var sc_partition = 53; var sc_click_stat = 1; var sc_security = "1bb5ddbb"; </script>' ."\n";
-    $html .= '<script type="text/javascript" src="'.$this->pluginurl.'free-online-latex-equation-editor_files/counter.js"></script>' ."\n";
-    $html .= '<script type="text/javascript" src="'.$this->pluginurl.'free-online-latex-equation-editor_files/jquery.js"></script>' ."\n";
 
 		// comment this script and uncomment the 3 above to use the non-minified code
-    	//$html .= '<script src="'.$this->pluginurl.'pagedown/markdown.min.js"></script>' . "\n";
+    //$html .= '<script src="'.$this->pluginurl.'pagedown/markdown.min.js"></script>' . "\n";
 
 		return array( 'type'=>'custom', 'html'=>$html );
 	}

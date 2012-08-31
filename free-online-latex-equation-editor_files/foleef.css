@@ -1,3 +1,746 @@
+
+.container {width: auto; margin: 0 auto;}
+ul.tabs {
+padding-left: 0;
+float: left;
+list-style: none;
+height: 32px;
+border-bottom: 1px solid ;
+width: 100%;
+}
+
+.iSymbol
+{
+    background-color: White;
+}
+ul.tabs li {
+float: left;
+margin: 0;
+padding: 0;
+height: 31px;
+line-height: 31px;
+border: 1px solid #ccc;	
+border-bottom: none;
+margin-bottom: -1px;
+background: #fff;
+overflow: hidden;
+position: relative;
+-moz-border-radius: 8px 8px 0 0;
+border-radius: 8px 8px 0 0;	
+}
+
+ul.tabs li a {
+text-decoration: none;
+color: #000;
+display: block;
+font-size: 1.2em;
+padding: 0 20px;	
+}
+
+ul.tabs li a:hover {
+background: #fcfcfc;
+-moz-border-radius: 8px 8px 0 0;
+border-radius: 8px 8px 0 0;	
+}	
+
+html ul.tabs li.active, html ul.tabs li.active a:hover  {
+background: #f9f9f9;
+padding-bottom:1px;
+border-bottom:none;
+font-weight:bold;
+}
+
+.tab_container {	
+clear: both;
+float: left; 
+width: 100%;
+background: #f7f7f7;
+border-left: 1px solid #d7d7d7;
+border-right: 1px solid #d7d7d7;
+
+}
+
+.tab_content {
+padding: 20px;
+font-size: 1.2em;
+}
+
+.tab_content img {
+	float: left;
+	margin: 0 2px 20px 0;
+	border: 1px solid #ddd;
+	padding: 1px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;	
+}
+
+#sci2ools_menu a
+{
+    display: block;
+    position: fixed;
+    top: 500px;
+    background: #000;
+    padding: 15px 5px;
+    border: 1px solid #999;
+    background: url(sci2ools_menu.png) 50% 50% no-repeat;
+    width: 50px;
+    height: 137px;
+    z-index: 200;
+    -moz-box-shadow: 0 0 20px #888;
+    -webkit-box-shadow: 0 0 20px#888;
+    box-shadow: 0 0 20px #888;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#sci2ools_menu a:hover
+{
+    background: url(sci2ools_menu.png) 50% 50% no-repeat;
+    z-index: 200;
+    border: 1px solid #999;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+}
+
+.sci2ools_logo
+{
+    background: url(sci2ools_logo.png) no-repeat scroll 0 0 transparent;
+}
+
+#sci2ools_iBanner
+{
+    background: url(sci2ools.png) no-repeat scroll 0 0 transparent;
+}
+
+.sci2ools_icc
+{
+    width: 290px;
+}
+
+.title_tool a
+{
+    padding-left: 10px;
+    color: #000;
+    font: normal 35px Helvetica;
+    text-decoration: none;
+}
+
+.title_tool a:hover
+{
+    color: #DE4220;
+}
+
+.more_tool a
+{
+    color: #DE4220;
+    font: bold 17px Helvetica;
+    text-decoration: none;
+}
+
+.more_tool a:hover
+{
+    color: #000;
+}
+
+.logo
+{
+    width: 420px;
+    height: 240px;
+}
+
+.clear
+{
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after
+{
+    clear: both;
+    content: '.';
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfix
+{
+    display: inline-block;
+}
+
+* html .clearfix
+{
+    height: 1%;
+}
+
+.clearfix
+{
+    display: block;
+}
+
+body
+{
+    background: #F4F4F4;
+    color: #444444;
+    font-family: arial;
+    font-size: 12px;
+    line-height: 1.6em;
+}
+
+#iPage
+{
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    width: 1000px;
+}
+
+#iHeader
+{
+    color: #7B7B7B;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.iContent
+{
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    margin-top: 20px;
+    padding: 20px 0px 40px 50px;
+}
+
+.iContent_others
+{
+    width: 970px;
+    height: 770px;
+    position: relative;
+    text-align: left;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    margin: 60px auto;
+    padding-left: 20px;
+}
+
+.iContentCell
+{
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.iContentCell h2
+{
+    font: normal 21px Helvetica, Arial, FreeSans, sans-serif;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+input.iButton
+{
+    border: medium none;
+    display: block;
+    height: 56px;
+    line-height: 56px;
+    outline: medium none;
+    overflow: hidden;
+    text-indent: -9000px;
+}
+
+input.iButton:hover
+{
+    background-position: 0 -56px;
+    cursor: pointer;
+}
+
+#iBanner
+{
+    margin-top: 10px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: url(gray_banner_big.jpg) repeat-x scroll 0 0 transparent; /*background: url(bkgray.png) ;	*/
+    color: #FFFFFF;
+    height: 370px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+#iBanner h1
+{
+    height: 104px;
+    left: 507px;
+    line-height: 104px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    top: 30px;
+    width: 420px;
+}
+
+#iBannerVideo
+{
+    left: 53px;
+    position: absolute;
+    top: 57px;
+}
+
+#iBannerNews
+{
+    bottom: 13px;
+    color: #CCCCCC;
+    left: 30px;
+    position: absolute;
+    width: 680px;
+}
+
+#iBannerNews banner_note
+{
+    float: left;
+    width: 100px;
+}
+
+#iBannerNews strong
+{
+    color: #fff;
+}
+
+.pipe
+{
+    margin: 0 5px;
+}
+
+.hyphen
+{
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+
+#iBanner p
+{
+    font-size: 17px;
+    left: 510px;
+    line-height: 1.7em;
+    margin-top: 0;
+    padding-top: 0;
+    position: absolute;
+    top: 170px;
+    font-family: verdana;
+    width: 440px;
+}
+
+#iBanner p a
+{
+    color: #fff;
+    text-decoration: underline;
+}
+
+#iFooter
+{
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -moz-box-shadow: 1px 1px 0 #fff inset;
+    border: 1px solid #ccc;
+    color: #555;
+    margin-top: 20px;
+    padding: 30px 30px;
+}
+
+#iFooterStatus
+{
+    color: #979797;
+    font-size: 11px;
+    margin: 10px 0 20px;
+    padding: 0 30px;
+}
+
+.iFooterMenu
+{
+    float: left;
+}
+
+.iFooterSocial
+{
+    display: inline;
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+#iFooterStatus a
+{
+    color: #999;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+#iFooterStatus a:hover
+{
+    color: #666;
+    text-decoration: underline;
+}
+
+.feature
+{
+    background: url(bullet_black.png) no-repeat 0 50% transparent;
+    padding-left: 24px;
+    font: normal 13px verdana;
+    line-height: 20px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+
+#iFooter a
+{
+    color: #666;
+    display: block;
+    padding: 2px 0;
+    text-decoration: none;
+    font: normal 11px tahoma;
+}
+
+#iFooter a:hover
+{
+    color: #000;
+    text-decoration: underline;
+}
+
+#iFooter h5
+{
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.iFooterBody
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+.iFooterCell
+{
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 140px;
+}
+
+.leftAlign
+{
+    float: left;
+}
+
+.rightAlign
+{
+    float: right;
+}
+
+.toolsTitle
+{
+    font: normal 27px Helvetica, Arial, FreeSans, sans-serif;
+    color: #444;
+}
+
+img, a img
+{
+    border: none;
+}
+
+.iText
+{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font: normal 13px arial;
+    border: 1px solid #ccc;
+    color: #444;
+    padding: 7px;
+}
+
+.button_fix
+{
+    margin-top: 10px !important;
+}
+
+.iFormFile
+{
+    color: #00335E;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.iListBox
+{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font: normal 13px Helvetica;
+    border: 1px solid #ccc;
+    color: #444;
+    padding: 4px;
+    margin-bottom: 6px;
+}
+
+.iTextArea
+{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    color: #C94A1E;
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.topMarg
+{
+    margin-top: 10px;
+}
+
+.hide
+{
+    display: none;
+}
+
+.iCheckbox, .iRadio
+{
+    margin: .25em;
+}
+
+.jobCss
+{
+    font: bold 13px tahoma;
+    border-top: 1px solid #DFDFDF;
+    width: 830px;
+}
+
+.fail
+{
+    color: #E10015;
+    background: url(exclamation.png) no-repeat 0 14px;
+    margin-top: 30px !important;
+    padding: 20px 20px 20px 30px;
+}
+
+.success
+{
+    color: #008c00;
+    background: url(download.png) no-repeat 0 14px;
+    margin-top: 30px !important;
+    padding: 30px 0 20px 80px;
+}
+
+.hidden_error
+{
+    color: #fff;
+    display: none;
+}
+
+.mb30
+{
+    margin-bottom: 30px !important;
+}
+
+.mbottom
+{
+    margin-top: 30px;
+    border-bottom: 1px inset #eee;
+    width: 880px;
+}
+
+.mtop
+{
+    margin-top: 30px;
+    width: 880px;
+}
+
+.mb10
+{
+    margin-bottom: 30px !important;
+}
+
+.job_status
+{
+    border-top: 1px solid #DFDFDF;
+    padding: 20px 30px 0;
+    color: #aaa;
+    width: 830px;
+}
+
+#link_download_small
+{
+    color: #007700;
+    font: normal 11px verdana;
+}
+
+#link_download_big a
+{
+    color: #DE4220;
+    font: normal 35px Helvetica;
+    text-decoration: none;
+}
+
+#link_download_big a:hover
+{
+    color: #000;
+}
+
+#progress
+{
+    background: url('loading.gif');
+    height: 13px;
+    width: 208px;
+    z-index: 5;
+    margin: 0 auto;
+    display: none;
+}
+
+#progress_title
+{
+    text-align: center;
+    padding-top: 20px;
+    color: #DE4220;
+    font: bold 13px Helvetica;
+}
+
+.iNote
+{
+    color: #999;
+    font: normal 11px arial;
+    margin-top: 20px;
+    margin-left: 5px;
+    text-shadow: 1px 1px #fff;
+    text-align: center;
+}
+
+.iSample
+{
+    color: #F95334;
+    font-weight: bold;
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+.iNote a
+{
+    color: #37B41C;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+.iNote a:hover
+{
+    color: #F95334;
+    text-decoration: underline;
+}
+
+
+.iThumb a
+{
+    margin-left: 10px;
+    background: #fff;
+    padding: 5px;
+    border: 1px solid #f0f0f0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    float: left;
+}
+
+
+.iThumb a:hover
+{
+    background: #aaa;
+    border: 1px solid #333;
+}
+
+.img_zoom a
+{
+    background: url(zoom.gif) no-repeat;
+    margin-left: 10px;
+    margin-top: -15px;
+    padding-left: 71px;
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+
+.img_zoom a:hover
+{
+    background: url(zoom_visit.gif) no-repeat;
+}
+
+.new
+{
+    color: #FB5435;
+    font: bold 10px verdana;
+}
+
+.recent
+{
+    color: #0D8F1A;
+    font: bold 11px tahoma;
+}
+
+#iBannerShare
+{
+    bottom: 10px;
+    right: 15px;
+    position: absolute; /*height: 20px;*/
+}
+
+.close_btn
+{
+    font: bold 21px Tahoma, Geneva, sans-serif;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin: 0 auto;
+    padding: 0 7px 2px 7px;
+    color: #3A3D42;
+    text-shadow: 0 1px -1px white;
+    background: #E2E3E4;
+    background-image: -moz-linear-gradient(#E2E3E4, #AAADB4);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#E2E3E4), to(#AAADB4));
+}
+
+.close_btn:hover
+{
+    background: #ECEDEF;
+    background-image: -moz-linear-gradient(#f8f8f9, #dddfe1);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8f8f9), to(#dddfe1));
+    box-shadow: 0 0 20px #999;
+    -moz-box-shadow: 0 0 20px #999;
+    -webkit-box-shadow: 0 0 20px #999;
+    cursor: pointer;
+}
+
 body {
 background: #fff;
 color: #444444;

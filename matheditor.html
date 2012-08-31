@@ -1,11 +1,8 @@
     <link rel="stylesheet" type="text/css" href="matheditor.css" />
-    <link rel="stylesheet" href="free-online-latex-equation-editor_files/sci_2ools.css"
-        type="text/css" />
-    <link rel="stylesheet" href="free-online-latex-equation-editor_files/sci_i2theme.css"
-        type="text/css" />
-    <script type="text/javascript" src="./wmd/Markdown.Converter.js"></script>
-    <script type="text/javascript" src="./wmd/Markdown.Sanitizer.js"></script>
-    <script type="text/javascript" src="./wmd/Markdown.Editor.js"></script>
+    <link rel="stylesheet" href="free-online-latex-equation-editor_files/foleef.css" type="text/css" />
+    <script type="text/javascript" src="./pagedown/Markdown.Converter.js"></script>
+    <script type="text/javascript" src="./pagedown/Markdown.Sanitizer.js"></script>
+    <script type="text/javascript" src="./pagedown/Markdown.Editor.js"></script>
     <script type="text/x-mathjax-config">
 	  MathJax.Hub.Config({tex2jax: {
         inlineMath: [['$','$'], ['\\(','\\)']]}});
@@ -66,22 +63,8 @@
 </script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML">
 </script>
-    
-    <link rel="stylesheet" href="free-online-latex-equation-editor_files/sci_tex2img.css"
-        type="text/css">
-    <link rel="stylesheet" href="free-online-latex-equation-editor_files/JQTabs.css"
-        type="text/css">
-    <link rel="stylesheet" type="text/css" href="free-online-latex-equation-editor_files/jquery.css"
-        media="screen">
-    <script src="free-online-latex-equation-editor_files/jsonrpc.js" async="" type="text/javascript"
-        id="LR2"></script>
-    <script src="free-online-latex-equation-editor_files/parent.js" async="" type="text/javascript"
-        id="LR1"></script>
-    <script src="free-online-latex-equation-editor_files/ga.js" async="" type="text/javascript"></script>
     <script type="text/javascript" src="free-online-latex-equation-editor_files/jquery_003.js"></script>
-    <!-- <script type="text/javascript" src="/sites/all/modules/sci_2ools/js/jquery.purr.js"></script> -->
     <script type="text/javascript">
-				
 				
 				//<![CDATA[
 				$(document).ready(function(){
@@ -103,13 +86,6 @@
 	});
 					 $("a.single_image").fancybox();	
 					 
-					 $("#wmd-input").focus(function(){
-						  if(this.value=="z = \\sqrt{x^2 + y^2}")
-						  {
-							this.value="";
-						  }
-					 });
-
 					jQuery.fn.extend({
 						insertAtCaret: function(myValue){
 						  return this.each(function(i) {
@@ -320,7 +296,6 @@
 				});
 				//]]>
 			</script>
-    <script src="free-online-latex-equation-editor_files/googleapis.js"></script>
     <div class="wmd-panel">
         <br />
         <!-- Start tabs -->
@@ -1312,17 +1287,17 @@
             </div>
         </div>
         <!-- Between the math menu and the button bar -->
-        <div class="clear">
-        </div>
-        <div id="wmd-button-bar">
-        </div>
+        <div class="clear"> </div>
+        <div id="wmd-button-bar"> </div>
+        <div id="wmd-button-row" class="wmd-button-row"> </div>
         <textarea name="eq_latex" class="wmd-input" cols="80" rows="12" id="wmd-input" onkeydown="Preview.Update();">
-Nice title
+Sample Text
 ------------------------------
 
-$x$ $\rightarrow$ $x+1$
+Hello $\LaTeX$
 
-$\underbrace{ab}$
+When $a \ne 0$, there are two solutions to $\(ax^2 + bx + c = 0\)$ and they are 
+$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$
 
 **Some bold text**
 
@@ -1336,7 +1311,7 @@ Links :
 http://google.com
 
 http://stackoverflow.com
-        </textarea>
+</textarea>
     </div>
     <div id="wmd-preview" class="wmd-preview" style="display: none"></div>
     <div id="wmd-buffer" class="wmd-preview"></div>
@@ -1364,16 +1339,6 @@ http://stackoverflow.com
         })();
         </script>
     <script type="text/javascript" src="free-online-latex-equation-editor_files/jquery_002.js"></script>
-    <script type="text/javascript" src="free-online-latex-equation-editor_files/all.js"></script>
-    <script type="text/javascript" src="free-online-latex-equation-editor_files/widgets.js"></script>
-    <script type="text/javascript">
-        var sc_project = 4155887;
-        var sc_invisible = 1;
-        var sc_partition = 53;
-        var sc_click_stat = 1;
-        var sc_security = "1bb5ddbb";
-        </script>
-    <script type="text/javascript" src="free-online-latex-equation-editor_files/counter.js"></script>
     <script type="text/javascript" src="free-online-latex-equation-editor_files/jquery.js"></script>
     <script>
         Preview.Init();
