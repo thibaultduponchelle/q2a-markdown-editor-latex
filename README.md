@@ -27,6 +27,22 @@ Installation
 1. Download and extract the `markdown-editor` folder to the `qa-plugins` folder in your Q2A installation.
 2. Log in to your Q2A site as a Super Administrator and head to Admin > Posting.
 3. Set the default editor for questions and answers to 'Markdown Editor'. The editor does also work for comments, but keeping to plain text is recommended.
+4. Put this code into Admin, Layout, Custom HTML at top of every page: 
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	          extensions: ["tex2jax.js"],
+			      jax: ["input/TeX","output/HTML-CSS"],
+			      tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},
+				    TeX: { extensions: ["AMSmath.js","AMSsymbols.js"]}
+				});
+    </script>
+5. Put this code into Admin, Layout, Custom HTML in HEAD section of every page: 
+    <script type="text/javascript"
+		    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+6. Please check in Admin, General that url structure is like this : 
+    /index.php?qa=123&qa_1=why-do-birds-sing
+
 
 In Admin > Plugins, you can set two options:
 
