@@ -1,16 +1,16 @@
 <?php
 /*
 	Plugin Name: Markdown Editor with LaTeX support
-	Plugin URI: https://github.com/svivian/q2a-markdown-editor
-	Plugin Description: Markdown editor plugin for simple text-based markup with LaTeX support 
-	Plugin Version: 2.2
-	Plugin Date: 2012-06-14
-	Plugin Author: Scott Vivian & Thibault Duponchelle
-	Plugin Author URI: http://codelair.co.uk/
+	Plugin URI: https://github.com/thibaultduponchelle/q2a-markdown-editor-latex
+	Plugin Description: Markdown editor plugin with LaTeX support 
+	Plugin Version: 0.9
+	Plugin Date: 2012-08-14
+	Plugin Author: Thibault Duponchelle & Scott Svivian
+	Plugin Author URI: https://github.com/thibaultduponchelle/q2a-markdown-editor-latex 
 	Plugin Contributors: NoahY
 	Plugin License: GPLv3
 	Plugin Minimum Question2Answer Version: 1.4
-	Plugin Update Check URI: https://raw.github.com/svivian/q2a-markdown-editor/master/qa-plugin.php
+	Plugin Update Check URI: https://github.com/thibaultduponchelle/q2a-markdown-editor-latex
 
 	This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

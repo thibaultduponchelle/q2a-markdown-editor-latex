@@ -33,6 +33,10 @@ var Preview = {
 				Preview.timeout = null;
 				if (this.mjRunning) return;
 				var text = document.getElementById(prev_id).innerHTML;
+				//var hidden = document.getElementById("preview");
+				//alert(this.buffer.innerHTML);
+				//hidden.value = this.buffer.innerHTML;
+
 				if (text === this.oldtext) return;
 				this.buffer.innerHTML = this.oldtext = text;
 				this.mjRunning = true;

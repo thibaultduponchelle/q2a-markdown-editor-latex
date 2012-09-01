@@ -24,7 +24,6 @@ class qa_markdown_editor
 
 	function get_field(&$qa_content, $content, $format, $fieldname, $rows, $autofocus)
 	{
-
     $html = '<link rel="stylesheet" href="'.$this->pluginurl.'free-online-latex-equation-editor_files/foleef.css" type="text/css" />' ."\n";
 		
 		// Include necessary  jquery stuff
@@ -63,6 +62,7 @@ class qa_markdown_editor
 		$html .= '<div id="wmd-preview-'.$fieldname.'" class="wmd-preview" style="display:none"></div>' . "\n";
 		// The preview you see
 		$html .= '<div id="wmd-buffer-'.$fieldname.'" class="wmd-preview"></div>' . "\n";
+		//$html .= '<input type="hidden" name="preview" id="preview">' . "\n";
 
 		// Get the scripts for markdown editor
 		$html .= '<script src="'.$this->pluginurl.'pagedown/Markdown.Converter.js"></script>' . "\n";
@@ -83,7 +83,7 @@ class qa_markdown_editor
 
 		return array(
 			'format' => 'markdown',
-			'content' => $html
+			'content' => $html 
 		);
 	}
 
