@@ -1,4 +1,3 @@
-
 Markdown Editor plugin with LaTeX support for Question2Answer
 =================================================
 
@@ -35,7 +34,7 @@ Installation
     tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},`
     `TeX: { extensions: ["AMSmath.js","AMSsymbols.js"]}
     });
-    `</script>`
+    </script>`
     
 5. Put this code into Admin, Layout, Custom HTML in HEAD section of every page: 
     `<script type="text/javascript"
