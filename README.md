@@ -5,6 +5,7 @@ Markdown Editor plugin with LaTeX support for Question2Answer
 
 Check out my [WYSIWYG Math Formulas Editor](https://github.com/thibaultduponchelle/q2a-ckeditor-latex) which is **same same but different** (but more important it is working and tested with 1.8.2) :smile: 
 
+It looks like this but I repeat, it is BROKEN :sob:
 ![](screenies/foolef.png)
 
 Disclaimer
