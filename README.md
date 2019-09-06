@@ -11,8 +11,9 @@ It looks like this but I repeat, it is BROKEN :sob:
 Disclaimer
 -------------------------------------------------
 
-This is an improved version of the plugin made by Scott Svivian. 
+This is an improved version of the plugin made by **Scott Svivian**. 
 [q2a-markdown-editor](https://github.com/svivian/q2a-markdown-editor)
+
 Thanks to him for this great job :)
 
 
