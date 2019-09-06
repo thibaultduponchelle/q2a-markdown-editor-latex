@@ -2,9 +2,13 @@ Markdown Editor plugin with LaTeX support for Question2Answer
 =================================================
 
 :warning: CURRENTLY BROKEN :warning:
+
 :warning: CURRENTLY BROKEN :warning:
+
 :warning: CURRENTLY BROKEN :warning:
+
 :warning: CURRENTLY BROKEN :warning:
+
 :warning: CURRENTLY BROKEN :warning:
 
 Disclaimer
