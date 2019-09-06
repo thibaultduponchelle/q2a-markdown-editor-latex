@@ -66,4 +66,3 @@ Extra bits
     UPDATE qa_posts SET format='markdown' WHERE format='' AND type IN ('Q', 'A', 'Q_HIDDEN', 'A_HIDDEN')
 
 (Make sure to change `qa_` above to your installation's table prefix if it is different.)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/thibaultduponchelle/q2a-markdown-editor-latex/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
