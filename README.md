@@ -34,23 +34,28 @@ Installation
 2. Log in to your Q2A site as a Super Administrator and head to Admin > Posting.
 3. Set the default editor for questions and answers to 'Markdown Editor'. The editor does also work for comments, but keeping to plain text is recommended.
 4. Put this code into Admin, Layout, Custom HTML at top of every page: 
-    
-    `<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-	  extensions: ["tex2jax.js"],`
-    `jax: ["input/TeX","output/HTML-CSS"],
-    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},`
-    `TeX: { extensions: ["AMSmath.js","AMSsymbols.js"]}
-    });
-    </script>`
+```javascript
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+	  extensions: ["tex2jax.js"],
+          jax: ["input/TeX","output/HTML-CSS"],
+          tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]},`
+          TeX: { extensions: ["AMSmath.js","AMSsymbols.js"]}
+      });
+    </script>
+```
     
 5. Put this code into Admin, Layout, Custom HTML in HEAD section of every page: 
-    `<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">`
-    `</script>`
-6. Please check in Admin, General that url structure is like this : 
-    `/index.php?qa=123&qa_1=why-do-birds-sing`
+```javascript
+    <script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+```
 
+6. Please check in Admin, General that url structure is like this : 
+```
+/index.php?qa=123&qa_1=why-do-birds-sing
+```
 
 In Admin > Plugins, you can set two options:
 
@@ -64,6 +69,8 @@ Extra bits
 
 **Converting old posts:** If you have been running your Q2A site for a little while, you may wish to convert old content to Markdown. This does not work reliably for HTML content (created via the WYSIWYG editor); it is pretty safe for plain text content, but check your posts afterwards as some formatting may go awry. You can convert text posts automatically using this SQL query:
 
-    UPDATE qa_posts SET format='markdown' WHERE format='' AND type IN ('Q', 'A', 'Q_HIDDEN', 'A_HIDDEN')
+```sql
+UPDATE qa_posts SET format='markdown' WHERE format='' AND type IN ('Q', 'A', 'Q_HIDDEN', 'A_HIDDEN')
+```
 
 (Make sure to change `qa_` above to your installation's table prefix if it is different.)
