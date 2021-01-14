@@ -1,7 +1,7 @@
 Markdown Editor plugin with LaTeX support for Question2Answer
 =================================================
 
-**This repository is no longer maintained and archived**
+**This repository is no longer maintained and is now archived**
 
 :warning: CURRENTLY BROKEN :warning:
 
